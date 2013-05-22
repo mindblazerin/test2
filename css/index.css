@@ -1,0 +1,15 @@
+/* 
+    Document   : index
+    Created on : May 20, 2013, 1:52:49 AM
+    Author     : Sintija
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+#myCanvas{
+    background-color: #33ff33;
+}
