@@ -105,5 +105,5 @@ line-height: 1em;
 color: #ff4400;
 font-weight:bold;
 font-size: 72px;
-text-shadow:1px 1px 0px rgba(208,21,47,0),2px 2px 0px rgba(192,5,63,0),3px 3px 0px rgba(175,12,80,0),4px 4px 0px rgba(158,29,97,0), 5px 5px 0px rgba(141,46,114,0),6px 6px 5px rgba(0,0,0,0.9),6px 6px 1px rgba(0,0,0,0.5),0px 0px 5px rgba(0,0,0,0.2);
+text-shadow:0px 0px 1px rgb(225,38,-30),1px 1px 1px rgb(208,21,-47),2px 2px 1px rgb(192,5,-63),3px 3px 1px rgb(175,12,-80),4px 4px 1px rgb(158,29,-97), 5px 5px 1px rgb(141,46,-114),6px 6px 5px rgba(0,0,0,0.9),6px 6px 1px rgba(0,0,0,0.5),0px 0px 5px rgba(0,0,0,0.2);
 }
