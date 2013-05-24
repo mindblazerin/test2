@@ -5,24 +5,34 @@
 <html>
     <head>
         <title></title>
+		<!--[if lt IE 9]>
+			<script src="components/html5shiv/html5shiv.js"></script>
+		<![endif]-->
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link href="css/media-queries.css" rel="stylesheet" type="text/css">
         <script type="text/javascript" src="./js/jquery.js" ></script>   
         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="./js/index.js"></script>
-		<script type="text/javascript" src="./js/threeDPages.js"></script>
         <!--[if lt IE 9]>
-	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-<![endif]-->
+			<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+		<![endif]-->
     </head>
     <body class="blue_background">
-        <button id="about" class="button">?</button>
-        <div id="container">
-            <div id="content">
-                <p class="Three-Dee" id="nosaukums">SAVĀC BUMBIŅAS</p>
-              <button class="button">SPĒLĒT</button>
-            </div>
-        </div>
-        <p id="made_by">Veidojusi: Sintija Pelnēna</p>
+		<div id="pagewrap">
+			<header id="header">
+				<button id="about" class="button">?</button>
+			</header>
+			<div id="container">
+				<div id="content">
+					<p class="Three-Dee" id="nosaukums">SAVĀC BUMBIŅAS</p>
+				  <button class="button">SPĒLĒT</button>
+				</div>
+			</div>
+			<footer id="footer">
+				<p id="made_by">Veidojusi: Sintija Pelnēna</p>
+			</footer>
+		</div>
     </body>
 </html>

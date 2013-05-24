@@ -1,0 +1,43 @@
+@media screen and (max-width: 980px) {
+
+	#pagewrap {
+		width: 95%;
+	}
+
+	#content {
+		width: 70%;
+		
+	}
+
+}
+
+@media screen and (max-width: 650px) {
+	#content {
+		width: auto;
+		float: none;
+	}
+}
+
+@media screen and (max-width: 480px) {
+
+	html {
+		-webkit-text-size-adjust: none;
+	}
+	
+	#nosaukums {
+		font-size: 50px;
+		padding: 10px 8px;
+	}
+	.button{
+		font-size: 26px;
+		padding: 8px 18px;
+	}
+	
+	#about{
+		font-size: 14px;
+	}
+	
+	#made_by{
+		font-size: 13px;
+	}
+}
