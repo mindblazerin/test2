@@ -1,19 +1,27 @@
-﻿<!DOCTYPE html>
+<!--
+    Author: Sintija Pelnēna
+-->
+<!DOCTYPE html>
 <html>
-<head>
-    <title>Phonegap</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" >    
-    </script> <!-- jquery bibliotēkas -->
-    <script type="text/javascript" src="js/index.js"></script>
-</head>
-<body>
-<script type="text/javascript" src="phonegap.js"></script>
-    <div id="btn_start"><span>SĀKT</span></div>
-    <div id="info">aaa</div>
-    <div id="app">
-        <canvas id="myCanvas"></canvas>
-    </div>
-</body>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <script type="text/javascript" src="./js/jquery.js" ></script>   
+        <script type="text/javascript" src="phonegap.js"></script>
+        <script type="text/javascript" src="./js/index.js"></script>
+        <!--[if lt IE 9]>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+    </head>
+    <body class="blue_background">
+        <button id="about" class="button">?</button>
+        <div id="container">
+            <div id="content">
+                <p class="Three-Dee" id="nosaukums">SAVĀC BUMBIŅAS</p>
+              <button class="button">SPĒLĒT</button>
+            </div>
+        </div>
+        <p id="made_by">Veidojusi: Sintija Pelnēna</p>
+    </body>
 </html>
