@@ -5,8 +5,11 @@
     Description:
         Purpose of the stylesheet follows.
 */
+
+@font-face { font-family: Remachine; src: url('RemachineScript_PERSONAL_USE_ONLY.ttf'); }
+
 *{
-    font-family: 'Comic Sans MS', cursive;
+    font-family: Remachine;
 }
 root { 
     display: block;
@@ -84,7 +87,7 @@ html{
    text-shadow: rgba(0,0,0,.4) 0 1px 0;
    color: #ffffff;
    font-size: 36px;
-   font-family: 'Comic Sans MS', cursive;
+   /*font-family: 'Comic Sans MS', cursive;*/
    font-weight: bold;
    text-decoration: none;
    vertical-align: middle;
@@ -100,7 +103,7 @@ html{
    }
    
 .Three-Dee{
-font-family: 'Comic Sans MS', cursive;
+/*font-family: 'Comic Sans MS', cursive;*/
 line-height: 1em;
 color: #ff4400;
 font-weight:bold;
