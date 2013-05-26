@@ -31,6 +31,10 @@ and (orientation : portrait)
 		#content2{
 			
 		}
+		#info, #app{
+			float: none;
+			width: auto;
+		}
 	}
 }
 
