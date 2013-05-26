@@ -92,6 +92,7 @@ $(document).ready(function(){
 
 function onResize()
 {
+	$("#made_by").html($("html").width());
 	$("#app").css ("height",$("#app").width());
 	m_top = $("#container").height() / 2;
 	$("#container").css("margin-top","-"+m_top+"px");
