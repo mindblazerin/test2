@@ -5,12 +5,13 @@ and (orientation : portrait)
 		#content2{
 			
 		}
-		#info, #app{
+		#info, #app_div{
 			float: none;
 			width: auto;
 			
 		}
 	}
+
 
 @media screen and (max-width: 980px) {
 
@@ -26,12 +27,15 @@ and (orientation : portrait)
 		margin-bottom: 40px;
 	}
 	
-	@media screen and (orientation : portrait)
-	{
+	@media screen and (min-height: 651px){
+	.game_text{
+		color:red;
+	}
+
 		#content2{
 			
 		}
-		#info, #app{
+		#info, #app_div{
 			float: none;
 			width: auto;
 		}
@@ -61,6 +65,21 @@ and (orientation : portrait)
 	#made_by{
 		font-size: 14px;
 	}
+	
+	@media screen and (min-height: 481px){
+	.game_text{
+		color:red;
+	}
+
+		#content2{
+			
+		}
+		#info, #app_div{
+			float: none;
+			width: auto;
+		}
+	}
+	
 }
 
 @media screen and (max-width: 480px) {
@@ -90,6 +109,21 @@ and (orientation : portrait)
 	#made_by{
 		font-size: 13px;
 	}
+	
+	@media screen and (min-height: 321px){
+	.game_text{
+		color:red;
+	}
+
+		#content2{
+			
+		}
+		#info, #app_div{
+			float: none;
+			width: auto;
+		}
+	}
+	
 }
 
 @media only screen and (max-width : 321px) {
