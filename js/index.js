@@ -1,5 +1,5 @@
 var balls = [];
-var ball_cnt = 1;
+var ball_cnt = 10;
 var radius = 32;
 var ratio = 10000;
 var points = 0;
@@ -10,37 +10,33 @@ function ball(index){
     this.x = getRandom($("#app").offset().left, appw+$("#app").offset().left - (radius * 2));
     this.y = getRandom($("#app").position().top, apph+$("#app").position().top - (radius * 2));
     this.color = "#FF0000";
-    this.speedx = 0.2 + Math.random() * 3;
-    this.speedy = 0.2 + Math.random() * 3;
+    this.speedx = 0.2 + Math.random() * 0.8;
+    this.speedy = 0.2 + Math.random() * 0.8;
     this.radius = radius;
     this.name = "ball"+index;
     this.ball = document.createElement("div");
 }
 
-function move(){
-    for(var key in balls)
-    {
-        balls[key].x += balls[key].speedx;
-        balls[key].y += balls[key].speedy;
-        //if ball hits bottom or top side of screen
-        if(balls[key].y + (2 * radius) >= apph + $("#app").position().top 
-                || balls[key].y <= $("#app").position().top)
-        {
-            balls[key].speedy *= -1;
-        }
-        //if ball hits right or left side of screen
-        if(balls[key].x + (2* radius) >= appw + $("#app").position().left 
-                || balls[key].x <= $("#app").position().left)
-        {
-            balls[key].speedx *= -1;
-        }
-        balls[key].ball.style.left = balls[key].x+"px";
-        balls[key].ball.style.top = balls[key].y+"px";
-		if((parseInt(key) + 1) === balls.length)
+move = function(){
+	for(var key in balls)
+	{
+		balls[key].x += balls[key].speedx;
+		balls[key].y += balls[key].speedy;
+		//if ball hits bottom or top side of screen
+		if(balls[key].y + (2 * radius) >= apph + $("#app").position().top 
+				|| balls[key].y <= $("#app").position().top)
 		{
-			setTimeout(move, 10);
+			balls[key].speedy *= -1;
 		}
-    }
+		//if ball hits right or left side of screen
+		if(balls[key].x + (2* radius) >= appw + $("#app").position().left 
+				|| balls[key].x <= $("#app").position().left)
+		{
+			balls[key].speedx *= -1;
+		}
+		balls[key].ball.style.left = balls[key].x+"px";
+		balls[key].ball.style.top = balls[key].y+"px";
+	}
 } 
 
 function getRandom (min, max) {
@@ -88,7 +84,7 @@ $(document).ready(function(){
                  (balls[balls.length - 1].y)+"px";
             balls[balls.length - 1].ball.onclick = ballClick;
         }
-        move();
+        setInterval(move,1);
         $("#pagewrap").hide();
         
     });
