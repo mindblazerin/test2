@@ -1,5 +1,5 @@
 var balls = [];
-var ball_cnt = 5;
+var ball_cnt = 10;
 var radius = 32;
 var ratio = 10000;
 var points = 0;
@@ -10,14 +10,15 @@ function ball(index){
     this.x = getRandom($("#app").offset().left, appw+$("#app").offset().left - (radius * 2));
     this.y = getRandom($("#app").position().top, apph+$("#app").position().top - (radius * 2));
     this.color = "#FF0000";
-    this.speedx = 0.2 + Math.random() * 1.5;
-    this.speedy = 0.2 + Math.random() * 1.5;
+    this.speedx = 0.2 + Math.random() * 7;
+    this.speedy = 0.2 + Math.random() * 7;
     this.radius = radius;
     this.name = "ball"+index;
     this.ball = document.createElement("div");
 }
 
 function move(){
+console.log("move");
     for(var key in balls)
     {
         balls[key].x += balls[key].speedx;
@@ -84,7 +85,7 @@ $(document).ready(function(){
                  (balls[balls.length - 1].y)+"px";
             balls[balls.length - 1].ball.onclick = ballClick;
         }
-        setInterval(move,100);
+        setInterval(move,50);
         $("#pagewrap").hide();
         
     });
