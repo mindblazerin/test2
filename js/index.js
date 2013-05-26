@@ -19,6 +19,7 @@ ball = function(index){
 }
 
 var move = function(){
+	
 	for(var key in balls)
 	{
 		balls[key].x += balls[key].speedx;
@@ -40,7 +41,7 @@ var move = function(){
 		
 		if((parseInt(key)+1) === balls.length)
 		{
-			clearTimeout(interval);
+			clearInterval(interval);
 			interval = setInterval(move, 60);
 		}
 	}
@@ -94,7 +95,6 @@ $(document).ready(function(){
 		
         interval = setInterval(move,60);
         $("#pagewrap").hide();
-        
     });
 });
 
