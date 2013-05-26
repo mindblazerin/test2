@@ -70,7 +70,8 @@ html{
 	postion: absolute;
 	width: 600px;
 	height: 600px;
-	background-image: url('../images/grass.jpg');
+	/*background-image: url('../images/grass.jpg');*/
+	background-color: green;
 }
 
 /*.className{
