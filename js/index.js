@@ -37,6 +37,7 @@ move = function(){
 		balls[key].ball.style.left = balls[key].x+"px";
 		balls[key].ball.style.top = balls[key].y+"px";
 	}
+	setTimeout(move, 20);
 } 
 
 function getRandom (min, max) {
@@ -84,7 +85,8 @@ $(document).ready(function(){
                  (balls[balls.length - 1].y)+"px";
             balls[balls.length - 1].ball.onclick = ballClick;
         }
-        setInterval(move,20);
+        /*setInterval(move,20);*/
+		move();
         $("#pagewrap").hide();
         
     });
