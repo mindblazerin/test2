@@ -10,15 +10,14 @@ function ball(index){
     this.x = getRandom($("#app").offset().left, appw+$("#app").offset().left - (radius * 2));
     this.y = getRandom($("#app").position().top, apph+$("#app").position().top - (radius * 2));
     this.color = "#FF0000";
-    this.speedx = 0.2 + Math.random() * 7;
-    this.speedy = 0.2 + Math.random() * 7;
+    this.speedx = 0.2 + Math.random() * 3;
+    this.speedy = 0.2 + Math.random() * 3;
     this.radius = radius;
     this.name = "ball"+index;
     this.ball = document.createElement("div");
 }
 
 function move(){
-console.log("move");
     for(var key in balls)
     {
         balls[key].x += balls[key].speedx;
@@ -37,6 +36,10 @@ console.log("move");
         }
         balls[key].ball.style.left = balls[key].x+"px";
         balls[key].ball.style.top = balls[key].y+"px";
+		if((parseInt(key) + 1) === balls.length)
+		{
+			setTimeout(move, 10);
+		}
     }
 } 
 
@@ -85,7 +88,7 @@ $(document).ready(function(){
                  (balls[balls.length - 1].y)+"px";
             balls[balls.length - 1].ball.onclick = ballClick;
         }
-        setInterval(move,70);
+        move();
         $("#pagewrap").hide();
         
     });
