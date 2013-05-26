@@ -1,5 +1,5 @@
 var balls = [];
-var ball_cnt = 10;
+var ball_cnt = 1;
 var radius = 32;
 var ratio = 10000;
 var points = 0;
@@ -85,7 +85,7 @@ $(document).ready(function(){
                  (balls[balls.length - 1].y)+"px";
             balls[balls.length - 1].ball.onclick = ballClick;
         }
-        setInterval(move,50);
+        setInterval(move,70);
         $("#pagewrap").hide();
         
     });
