@@ -10,8 +10,8 @@ function ball(index){
     this.x = getRandom($("#app").offset().left, appw+$("#app").offset().left - (radius * 2));
     this.y = getRandom($("#app").position().top, apph+$("#app").position().top - (radius * 2));
     this.color = "#FF0000";
-    this.speedx = 0.2 + Math.random() * 0.8;
-    this.speedy = 0.2 + Math.random() * 0.8;
+    this.speedx = 0.2 + Math.random() * 3;
+    this.speedy = 0.2 + Math.random() * 3;
     this.radius = radius;
     this.name = "ball"+index;
     this.ball = document.createElement("div");
@@ -84,7 +84,7 @@ $(document).ready(function(){
                  (balls[balls.length - 1].y)+"px";
             balls[balls.length - 1].ball.onclick = ballClick;
         }
-        setInterval(move,1);
+        setInterval(move,20);
         $("#pagewrap").hide();
         
     });
