@@ -84,7 +84,7 @@ $(document).ready(function(){
                  (balls[balls.length - 1].y)+"px";
             balls[balls.length - 1].ball.onclick = ballClick;
         }
-        setInterval(move,10);
+        setInterval(move,100);
         $("#pagewrap").hide();
         
     });
