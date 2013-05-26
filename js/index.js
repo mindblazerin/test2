@@ -5,19 +5,20 @@ var ratio = 10000;
 var points = 0;
 var appw = 0, apph = 0;
 var gamew = 0, gameh = 0, offsetLeft = 0, offsetTop = 0;
+var interval;
     
-function ball(index){
+ball = function(index){
     this.x = getRandom($("#app").offset().left, appw+$("#app").offset().left - (radius * 2));
     this.y = getRandom($("#app").position().top, apph+$("#app").position().top - (radius * 2));
     this.color = "#FF0000";
-    this.speedx = 0.2 + Math.random() * 3;
-    this.speedy = 0.2 + Math.random() * 3;
+    this.speedx = 0.2 + Math.random() * 5;
+    this.speedy = 0.2 + Math.random() * 5;
     this.radius = radius;
     this.name = "ball"+index;
     this.ball = document.createElement("div");
 }
 
-move = function(){
+var move = function(){
 	for(var key in balls)
 	{
 		balls[key].x += balls[key].speedx;
@@ -36,8 +37,13 @@ move = function(){
 		}
 		balls[key].ball.style.left = balls[key].x+"px";
 		balls[key].ball.style.top = balls[key].y+"px";
+		
+		if((parseInt(key)+1) === balls.length)
+		{
+			clearTimeout(interval);
+			interval = setTimeout(move, 5);
+		}
 	}
-	setTimeout(move, 20);
 } 
 
 function getRandom (min, max) {
@@ -85,14 +91,14 @@ $(document).ready(function(){
                  (balls[balls.length - 1].y)+"px";
             balls[balls.length - 1].ball.onclick = ballClick;
         }
-        /*setInterval(move,20);*/
-		move();
+		
+        interval = setTimeout(move,5);
         $("#pagewrap").hide();
         
     });
 });
 
-function onResize()
+onResize = function()
 {
 	$("#made_by").html($("html").width());
 	$("#app").css ("height",$("#app").width());
