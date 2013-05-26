@@ -41,7 +41,7 @@ var move = function(){
 		if((parseInt(key)+1) === balls.length)
 		{
 			clearTimeout(interval);
-			interval = setInterval(move, 20);
+			interval = setInterval(move, 60);
 		}
 	}
 } 
@@ -92,7 +92,7 @@ $(document).ready(function(){
             balls[balls.length - 1].ball.onclick = ballClick;
         }
 		
-        interval = setInterval(move,20);
+        interval = setInterval(move,60);
         $("#pagewrap").hide();
         
     });
