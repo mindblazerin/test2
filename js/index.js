@@ -228,7 +228,7 @@ $(document).ready(function(){
 onResize = function(){
 	$("#app_div").css ("height",$("#app_div").width());
 	$("#app").css ("height",$("#app").width());
-	
+	console.log($("#app").width());
 	move();
 	if($("html").height()>$("html").width())
 	{
@@ -269,4 +269,5 @@ onResize = function(){
             balls[key].y = balls[key].y * apph / oldh;
         }
     }
+
 }
