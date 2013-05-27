@@ -26,19 +26,20 @@ and (orientation : portrait)
 	#nosaukums{
 		margin-bottom: 40px;
 	}
-	
-	@media screen and (min-height: 651px){
-	.game_text{
-		color:red;
-	}
+}
 
-		#content2{
-			
-		}
-		#info, #app_div{
-			float: none;
-			width: auto;
-		}
+@media screen and (max-width: 800px) {
+	#content2{
+		width: auto;
+	}
+	#info{
+		width:25%;
+	}
+	#app_div{
+		width:75%;
+	}
+	#app{
+		width:100%;
 	}
 }
 
@@ -64,22 +65,7 @@ and (orientation : portrait)
 	
 	#made_by{
 		font-size: 14px;
-	}
-	
-	@media screen and (min-height: 481px){
-	.game_text{
-		color:red;
-	}
-
-		#content2{
-			
-		}
-		#info, #app_div{
-			float: none;
-			width: auto;
-		}
-	}
-	
+	}	
 }
 
 @media screen and (max-width: 480px) {
@@ -108,20 +94,6 @@ and (orientation : portrait)
 	
 	#made_by{
 		font-size: 13px;
-	}
-	
-	@media screen and (min-height: 321px){
-	.game_text{
-		color:red;
-	}
-
-		#content2{
-			
-		}
-		#info, #app_div{
-			float: none;
-			width: auto;
-		}
 	}
 	
 }

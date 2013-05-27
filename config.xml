@@ -48,7 +48,7 @@
 
 
     <!-- Define app icon for each platform. -->
-	<icon src="image/ball.png" />
+	<icon src="images/ball.png" />
 
     <!--
         Define access to external domains.
