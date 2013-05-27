@@ -11,10 +11,12 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" href="css/styles.css">
 		<link href="css/media-queries.css" rel="stylesheet" type="text/css">
-        <script type="text/javascript" src="./js/jquery.js" ></script>   
+        <script type="text/javascript" src="js/jquery2.js" ></script>   
         <script type="text/javascript" src="phonegap.js"></script>
-        <script type="text/javascript" src="./js/index.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="js/jquery.reveal.js"></script>
         <!--[if lt IE 9]>
 			<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 		<![endif]-->
@@ -45,8 +47,26 @@
 				</div>
 			</div>
 		</div>
-		<div id="end">
-			<button id="restart" class="button">Spēlēt vēlreiz</button>
+		
+		<div id="end_screen">
+			<div id="end_heading">
+				Savākto bumbiņu skaits: <span id="end_result"></span>
+			</div>
+			<div id="end_content">
+				<p>Vai vēlies spēlēt vēlreiz?</p>
+				<a href="#" class="button2 green close" id="play_again"><img src="images/tick.png">Jā!</a>
+				<a href="#" class="button2 red close" id="to_home"><img src="images/cross.png">Nē!</a>
+			</div>
+		</div>
+		
+		<div id="info_screen">
+			<div id="info_heading">
+				Aplikācijas apraksts
+			</div>
+			<div id="info_content">
+				<p>Šī ir testa spēle vairākplatformu aplikāciju izveidei bakalaura darbam. Spēles uzdevums ir minūtes laikā savākt pēc iespējas vairāk futbolbumbu, klikšķinot uz tām.</p>
+				<a href="#" class="button2 red close" style="float:right;"><img src="images/cross.png">Aizvērt</a>
+			</div>
 		</div>
     </body>
 </html>

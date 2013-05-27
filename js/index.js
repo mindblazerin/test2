@@ -1,7 +1,7 @@
 var balls = {};
 var ball_counter = 0;
 var balls_size = 0;
-var ball_cnt = 3;
+var ball_cnt = 5;
 var radius = 32;
 var ratio = 10000;
 var points = 0;
@@ -24,7 +24,7 @@ var ball = function(index){
 }
 
 var setUpNewBall = function(){
-	if(balls_size < 5)
+	if(balls_size < 10)
 	{	
 		ball_counter++;
 		balls_size++;
@@ -100,15 +100,24 @@ timeTick = function(){
 			delete(balls[key]);
 		}
 		balls_size = 0;
-		$("#game").hide();
-		$("#end").show();
+		showEndScreen($("#points").text());
 		console.log("Tavs rezultâts - savâktas",$("#points").text(),"futbola bumbas!");
 	}
 }
 
+function showEndScreen(points) {
+
+	$('#end_screen').reveal({ // The item which will be opened with reveal
+		animation: 'none',                   // fade, fadeAndPop, none
+		animationspeed: 600,                       // how fast animtions are
+		closeonbackgroundclick: false,              // if you click background will modal close?
+		dismissmodalclass: 'close'    // the class of a button or element that will close an open modal
+	});
+	$("#end_result").html(points);
+}
+
 $(document).ready(function(){
 	$("#container").hide();
-	$("#end").hide();
 	$(window).resize(onResize);
 	$("#app").css ("height",$("#app").width());
 	setTimeout(function(){
@@ -135,10 +144,9 @@ $(document).ready(function(){
 		addBallInterval = setInterval(setUpNewBall, 500);
     });
 	
-	$("#end").click(function()
+	$("#play_again").click(function()
 	{
 		$("#game").show();
-		$("#end").hide();
 		points = 0;
 		$("#points").text(points);
 		balls = {};
@@ -152,6 +160,28 @@ $(document).ready(function(){
         {
 			setUpNewBall();
         }
+	});
+	
+	$("#to_home").click(function()
+	{
+		points = 0;
+		$("#points").text(points);
+		balls = {};
+		ball_counter = 0;
+		ball_size = 0;
+		milisec_gone = 0;
+		$("#pagewrap").show();
+		$("#game").hide();
+	});
+	
+	$("#about").click(function()
+	{
+		$('#info_screen').reveal({ // The item which will be opened with reveal
+			animation: 'fade',                   // fade, fadeAndPop, none
+			animationspeed: 600,                       // how fast animtions are
+			closeonbackgroundclick: true,              // if you click background will modal close?
+			dismissmodalclass: 'close'    // the class of a button or element that will close an open modal
+		});
 	});
 });
 
