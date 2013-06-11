@@ -157,15 +157,15 @@ $(document).ready(function(){
 	//funcijas, kas nostrâdâ uz pogas 'SPÇLÇT' klikðíi
     $("#btn_start").click(function()
     {
-        onResize();
 		$("#game").show();
+		$("#pagewrap").hide();
+		onResize();
         for(var i = ball_cnt; i > 0; i--)
         {
 			setUpNewBall();
         }
 		//izsauc funkciju move ik pçc 3 sekundçm
         interval = setInterval(move,3000);
-        $("#pagewrap").hide();
 		//izsauc funkciju timeTick ik pçc 10 mikrosekundçm
 		game_time = setInterval(timeTick,10);
 		//izsauc funkciju setUpNewBall ik pçc pus sekundes
@@ -258,6 +258,7 @@ onResize = function(){
 		offsetTop = $("#app").offset().top;
 		offsetLeft = $("#app").offset().left;
         radius = Math.floor((appw * apph) / ratio);
+		if(radius < 10) radius = 10;
         for(var key in balls)
         {
             balls[key].radius = radius;
